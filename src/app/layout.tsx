@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navbar from "@/components/navbar";
-import Footer from "@/components/footer";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import { Suspense } from "react";
+import Loading from "./loading";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -14,13 +16,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body>
-        <div className="mx-40 h-screen">
-          <Navbar/>
-          {children}
+        <div className="min-h-screen">
+          <Navbar className="mx-40" />
+          <Suspense fallback={<Loading />}>
+            {children}
+          </Suspense>
         </div>
-        <Footer/>
+        <Footer id="contact" className="px-40" />
       </body>
     </html>
   );

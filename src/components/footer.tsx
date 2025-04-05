@@ -1,39 +1,89 @@
+"use client";
+
 import localFont from "next/font/local"
+import Image from "next/image";
+import { useState } from "react";
 
 const bytesizedFont = localFont({ src: "../../public/fonts/Bytesized-Regular.ttf" });
 
-export default function Footer() {
+function TextBox({ text, className }: {
+    text: string;
+    className?: string;
+}) {
     return (
-        <footer className="flex flex-col px-50 bg-gray-900">
-            <form action="/submit" method="POST" className="py-10">
-                <div className="mb-3">
-                    <h2 className="text-4xl text-white">
-                        {`Contact Me`}
+        <div className={`${className} rounded bg-gray-800 p-1`}>
+            <p className="p-no-colour !text-sm">
+                {text}
+            </p>
+        </div>
+    )
+}
+
+export default function Footer({id, className}: {
+    id?: string;
+    className?: string;
+}) {
+    const email: string = "henrymeach2@gmail.com";
+    const [clicked, setClicked] = useState<boolean>(false);
+
+    const onCopy = async () => {
+        await navigator.clipboard.writeText(email).then(() => {
+            setClicked(true);
+        });
+
+        await new Promise(resolve => setTimeout(resolve, 2000));
+        setClicked(false);
+    }
+
+    return (
+        <footer className={`${className} flex flex-col bg-gray-900 h-screen`} id={id}>
+            <section className="my-10 space-y-7 flex-grow">
+                <div>
+                    <h2 className="h2-no-colour text-white">
+                        Contact Me
                     </h2>
-                    <label className="block">
+                    <p className="p-no-colour">
                         My inbox is always open for opportunities, so feel free to reach out!
-                    </label>
+                    </p>
                 </div>
 
-                <div className="space-y-3">
-                    <div>
-                        <label className="block">
-                            Your email
-                        </label>
-                        <input type="email" required className="rounded bg-stone-200 text-black m-width w-full max-w-[475] pl-2 outline-black outline" />
+                <form action="/submit" method="POST">
+                    <div className="space-y-3">
+                        <div>
+                            <label className="block p-no-colour font-bold">
+                                Your Email <sup>(required)</sup>
+                            </label>
+                            <input type="email" required className="rounded bg-stone-200 text-black m-width w-full max-w-[475] px-2 py-1 outline-black outline" />
+                        </div>
+                        <div>
+                            <label className="block p-no-colour font-bold">
+                                Message <sup>(required)</sup>
+                            </label>
+                            <textarea required className="rounded bg-stone-200 text-black m-width w-full max-w-[475] px-2 py-1" />
+                        </div>
                     </div>
-                    <div>
-                        <label className="block">
-                            Your message
-                        </label>
-                        <textarea required className="rounded bg-stone-200 text-black m-width w-full max-w-[475] px-2" />
-                    </div>
-                </div>
 
-                <button className="block rounded bg-blue-500 px-2 py-1" type="submit">Submit</button>
-            </form>
-            <p className={`${bytesizedFont.className} text-xl flex justify-center`}>
-                {`Henry Meach --- © ${new Date().getFullYear()}`}
+                    <button className="block rounded bg-blue-500 px-2 py-1" type="submit">
+                        <p className="p-no-colour font-bold">
+                            Submit
+                        </p>
+                    </button>
+                </form>
+
+                <p className="p-no-colour flex">
+                    Alternatively, feel free to send me an email at
+                    <button onClick={() => onCopy()} className="flex relative items-center space-x-1 cursor-pointer rounded hover:outline hover:outline-orange-500 text-orange-400 px-1 mx-1 active:scale-105">
+                        {clicked ? <TextBox text="Copied!" className="absolute left-1/2 -translate-x-1/2 bottom-[120%]" /> : null}
+                        <span className="font-bold">
+                            {email}
+                        </span>
+                        <Image src="/icons/copy.svg" alt="Copy email button" width={20} height={20} />
+                    </button>
+                </p>
+            </section>
+
+            <p className={`p-no-colour flex justify-center mb-3`}>
+                {`© ${new Date().getFullYear()} — Henry Meach`}
             </p>
         </footer>
     )
