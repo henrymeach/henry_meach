@@ -14,62 +14,30 @@ export default function FlashCards({ images }: {
 }) {
     const imagesLength = images.length;
     const [imageIndex, setImageIndex] = useState(0);
-    const currentImage = images[imageIndex];
-    const nextImage = images[(imageIndex + 1) % imagesLength]
-    const nextNextImage = images[(imageIndex + 2) % imagesLength]
-    const shouldHandleAnimationEnd = (imageIndex ) 
-
-    const [clicked, setClicked] = useState(false);
 
     const onImageClick = () => {
-        
-        if (!clicked) {
-            setClicked(true);
-        }
-        
-        
-    }
-
-    const afterClick = () => {
-        setClicked(false);
         setImageIndex((imageIndex + 1) % imagesLength);
-        // setClicked(false);
-
-        // setTimeout(() => {
-        //     setImageIndex((imageIndex + 1) % imagesLength);
-        // }, 50);
     }
 
     return (
-        <button onClick={onImageClick} onAnimationEnd={afterClick} className="relative w-110 h-75">
+        <button onClick={onImageClick} className="relative w-110 h-75 group">
+            <Image src="/images/pointer.webp" alt="pointer icon" width={20} height={20} className="absolute z-100 translate-x-100 translate-y-33 rotate-350 group-hover:scale-120 group-active:scale-100 transition"/>
             {images.map((image, index) => {
-                const shouldHandleAnimationEnd = (imageIndex === index) && clicked;
 
                 return (
                 <Image key={index} src={image.src} alt={image.alt} fill
-                    onAnimationEnd={
-                        shouldHandleAnimationEnd
-                         ? (() => {
-                            setClicked(false);
-                            
-                            setImageIndex((imageIndex + 1) % imagesLength);
-                            }) : undefined
-                        }
                     className={clsx(
-                        "object-cover bg-white rounded-xl",
+                        "absolute object-cover bg-white rounded-xl transition",
                         {
                         // Current image
-                        "animate-fade-out": imageIndex === index && clicked,
-                        "z-50 drop-shadow-xl": imageIndex === index,
+                        "z-50 brightness-100 rotate-0 translate-y-0 translate-x-0 drop-shadow-xl": index === imageIndex,
 
                         // Next image
-                        "animate-slide-in":
-                            (imageIndex + 1) % imagesLength === index && clicked,
-                        "z-40 w-110 h-75 brightness-50 rotate-4 -translate-y-7 translate-x-9":
-                            (imageIndex + 1) % imagesLength === index,
+                        "z-40 brightness-50 rotate-4 -translate-y-7 translate-x-9 group-hover:-translate-y-9":
+                            index === (imageIndex + 1) % imagesLength,
 
                         // Other images (just there to prevent flicker)
-                        "z-30 w-110 h-75 brightness-50 rotate-4 -translate-y-7 translate-x-9": index !== imageIndex && index !== (imageIndex + 1) % imagesLength,
+                        "z-30 opacity-0 brightness-50 rotate-4 -translate-y-7 translate-x-9": index !== imageIndex && index !== (imageIndex +1) % imagesLength,
                         }
                     )}
                 />
