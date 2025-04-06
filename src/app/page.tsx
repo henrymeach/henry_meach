@@ -1,5 +1,5 @@
 import HeaderLink from "@/components/HeaderLink";
-import IconLink from "@/components/IconLink";
+import IconLink, { IconLinkButton } from "@/components/IconLink";
 import RevealPicture from "@/components/RevealPicture";
 import Showcase from "@/components/Showcase";
 import { projects } from "@/data/projects";
@@ -17,24 +17,27 @@ export default function Home() {
                 I'm Henry.<sup className="text-xs align-super">(hover over me!)</sup>
               </h2>
             </RevealPicture>
-            <p className="p-default">
-              Melbourne, Australia
-            </p>
+            <div className="flex items-center space-x-1">
+              <Image src="/icons/location-pin.svg" alt="Location Pin Icon" width={15} height={15} />
+              <p className="p-default">
+                Melbourne, Australia
+              </p>
+            </div>
             
           </div>
           
           <ul className="flex flex-row space-x-3">
             <li>
-              <IconLink title="LinkedIn" href="https://linkedin.com/in/henry-meach-26245716b/" src="/logos/linkedin/LI-In-Bug.png"/>
+              <IconLinkButton title="LinkedIn" href="https://linkedin.com/in/henry-meach-26245716b/" src="/logos/linkedin/LI-In-Bug.png"/>
             </li>
             <li>
-              <IconLink title="GitHub" href="https://github.com/henrymeach" src="/logos/github/github-mark.png"/>
+              <IconLinkButton title="GitHub" href="https://github.com/henrymeach" src="/logos/github/github-mark.png"/>
             </li>
           </ul>
         </div>
 
         <p className="p-default max-w-2/3">
-          I graduated with a Bachelor of Computer Science in 2024, and I'm constantly trying to learn and refine my knowledge of different technologies.
+          I'm a <b>Software Developer</b> who graduated with a Bachelor of Computer Science in 2024, and I'm constantly trying to learn and refine my knowledge of different technologies.
           My hope is that you enjoy this website as much as I did making it.
         </p>
       </section>
