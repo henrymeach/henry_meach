@@ -1,10 +1,11 @@
-import HeaderLink from "@/components/HeaderLink";
-import IconLink, { IconLinkButton } from "@/components/IconLink";
+import { developmentSkills, languageSkills, projectSkills } from "@/data/skills";
+import { IconLinkButton } from "@/components/IconLink";
 import RevealPicture from "@/components/RevealPicture";
 import Showcase from "@/components/Showcase";
 import { projects } from "@/data/projects";
 import Image from "next/image";
 import Link from "next/link";
+import SkillIcon from "@/components/Icon";
 
 export default function Home() {
   return (
@@ -44,12 +45,12 @@ export default function Home() {
 
       <section className="flex flex-col px-40">
         <Link href="/projects" className="w-fit">
-          <h2 className="hover:!text-sky-600 h2-default">
+          <h2 className="hover:!text-sky-600 active:!text-sky-700 h2-default">
             Projects ⟶
           </h2>
         </Link>
 
-        <p className="p-default mb-5 max-w-2/3 mb-10">
+        <p className="p-default max-w-2/3 mb-10">
           Some of my projects I've completed throughout the years.
         </p>
 
@@ -57,12 +58,53 @@ export default function Home() {
 
       </section>
 
-      <section className="flex flex-col px-40">
-        <Link href="/henry" className="w-fit">
-          <h2 className="hover:!text-sky-600 h2-default">
-            Blog ⟶
+      <section className="flex flex-col px-40 mb-20">
+          <h2 className="h2-default">
+            Skills
           </h2>
-        </Link>
+
+          <p className="p-default max-w-2/3 mb-5">
+            A variety of tools I've tinkered around with.
+          </p>
+
+          <div className="space-y-8">
+            <div>
+              <h3 className="h3-default mb-5">
+                Languages
+              </h3>
+
+              <div className="grid grid-cols-7 gap-4">
+                {languageSkills.map((skill, index) => (
+                  <SkillIcon key={index} src={skill.src} alt={skill.src} title={skill.title} description={skill.description} />
+                ))}
+
+              </div>
+            </div>
+
+            <div>
+              <h3 className="h3-default mb-5">
+                Development
+              </h3>
+
+              <div className="grid grid-cols-7 space-y-5">
+                {developmentSkills.map((skill, index) => (
+                  <SkillIcon key={index} src={skill.src} alt={skill.src} title={skill.title} description={skill.description} />
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h3 className="h3-default mb-5">
+                Project Management & Design
+              </h3>
+              <div className="grid grid-cols-7 gap-4">
+                {projectSkills.map((skill, index) => (
+                  <SkillIcon key={index} src={skill.src} alt={skill.src} title={skill.title} description={skill.description} />
+                ))}
+              </div>
+            </div>
+          </div>
+
       </section>
 
     </div>
