@@ -24,7 +24,7 @@ export default function Showcase({ projects, className="" }: {
                     {projects.map((project, index) => (
                         <Link href={project.href} key={index}>
                             <li
-                                className={`${selected === index ? "bg-white drop-shadow-lg" : "bg-gray-100"} active:bg-gray-100 rounded-2xl px-5 py-5`}
+                                className={`${selected === index ? "bg-white drop-shadow-lg" : "bg-gray-100"} active:bg-gray-100 rounded-2xl px-5 py-5 transition`}
                                 onMouseEnter={() => {setSelected(index); }}
                             >
                                 <p className="p-default !font-bold !text-black">{project.title}</p>
@@ -41,7 +41,7 @@ export default function Showcase({ projects, className="" }: {
                     </p>
                     <ul className="flex flex-row flex-wrap space-y-2 space-x-3 items-start">
                         {selectedProject.techStack.map((tech, techIndex) => (
-                            <li key={techIndex} className="bg-gray-200 rounded-xl px-2 py-1 shadow-sm">
+                            <li key={techIndex} className="bg-gray-200 rounded-lg px-2 py-1 font-bold">
                                 <p className="p-default !text-black !text-sm">{tech}</p>
                             </li>
                         ))}
