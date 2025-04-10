@@ -1,12 +1,13 @@
 import FlashCards from "@/components/FlashCards";
 import { images } from "@/data/images";
+import Image from "next/image";
 
 export default function Page() {
     const pictures = images;
 
     return (
         <div className="grid grid-col">
-            <section className="grid grid-cols-[4fr_5fr] px-40 h-150 bg-emerald-100">
+            <section className="grid grid-cols-[4fr_5fr] px-40 h-150 bg-emerald-50">
                 <div className="flex flex-col justify-center">
                     <h1 className="h2-default inline-block">
                         About Henry
@@ -21,6 +22,17 @@ export default function Page() {
                 <div className="flex items-center justify-center">
                     <FlashCards images={pictures} />
                 </div>
+            </section>
+            {/* <section className="px-40">
+                <h2 className="h2-default">
+                    Type Racing
+                </h2>
+                <p className="p-default !text-lg">
+                    Over the years I've become an esteemed type racer, able to gallop on my trusty keyboard at a max speed of 171 words per minute.
+                </p>
+            </section> */}
+            <section className="flex justify-center items-center my-25">
+                <Image src="/images/under_construction.png" alt="Under construction sign" width={300} height={300} />
             </section>
         </div>
     )
