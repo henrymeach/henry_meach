@@ -5,9 +5,20 @@ import Showcase from "@/components/Showcase";
 import { projects } from "@/data/projects";
 import Image from "next/image";
 import Link from "next/link";
-import SkillIcon from "@/components/Icon";
+import Tabs from "@/components/SkillsTabs";
 
 export default function Home() {
+  const skillsTabs = [{
+    header: "Languages",
+    skills: languageSkills
+  }, {
+    header: "Development",
+    skills: developmentSkills
+  }, {
+    header: "Project Management",
+    skills: projectSkills
+  }];
+
   return (
     <div className="flex mt-15 flex-col space-y-15">
       <section className="px-40" >
@@ -63,47 +74,11 @@ export default function Home() {
             Skills
           </h2>
 
-          <p className="p-default max-w-2/3 mb-5">
+          <p className="p-default max-w-2/3 mb-10">
             A variety of tools I've tinkered around with.
           </p>
 
-          <div className="space-y-8">
-            <div>
-              <h3 className="h3-default mb-5">
-                Languages
-              </h3>
-
-              <div className="grid grid-cols-7 gap-4">
-                {languageSkills.map((skill, index) => (
-                  <SkillIcon key={index} src={skill.src} alt={skill.src} title={skill.title} description={skill.description} />
-                ))}
-
-              </div>
-            </div>
-
-            <div>
-              <h3 className="h3-default mb-5">
-                Development
-              </h3>
-
-              <div className="grid grid-cols-7 space-y-5">
-                {developmentSkills.map((skill, index) => (
-                  <SkillIcon key={index} src={skill.src} alt={skill.src} title={skill.title} description={skill.description} />
-                ))}
-              </div>
-            </div>
-
-            <div>
-              <h3 className="h3-default mb-5">
-                Project Management & Design
-              </h3>
-              <div className="grid grid-cols-7 gap-4">
-                {projectSkills.map((skill, index) => (
-                  <SkillIcon key={index} src={skill.src} alt={skill.src} title={skill.title} description={skill.description} />
-                ))}
-              </div>
-            </div>
-          </div>
+          <Tabs tabs={skillsTabs} />
 
       </section>
 

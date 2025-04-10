@@ -110,6 +110,12 @@ export const developmentSkills = [
     alt: "Tableau icon",
     title: "Tableau",
     description: "For beautiful data visualisation"
+  },
+  {
+    src: "/logos/figma/figma.svg",
+    alt: "Figma icon",
+    title: "Figma",
+    description: "For interface design and prototyping"
   }
 ];
 
@@ -131,12 +137,6 @@ export const projectSkills = [
     alt: "Microsoft 365 icon",
     title: "Microsoft Office Suite",
     description: "Word, Excel, PowerPoint, Outlook, Teams, I can do it all!"
-  },
-  {
-    src: "/logos/figma/figma.svg",
-    alt: "Figma icon",
-    title: "Figma",
-    description: "For interface design and prototyping"
   },
   {
     src: "/logos/github/github.svg",
