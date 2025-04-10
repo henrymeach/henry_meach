@@ -25,9 +25,9 @@ export default function Tabs({ tabs }: {
                 {tabs.map((tab, index) => (
                     <button key={index} onClick={() => setSelected(index)} 
                         className={clsx(
-                            'p-no-colour h-full w-full rounded-xl p-3 font-bold transition cursor-pointer text-black',
-                            selected === index && "bg-white drop-shadow-sm",
-                            selected !== index && "hover:bg-gray-200"
+                            'p-no-colour h-full w-full rounded-xl p-3 font-bold transition cursor-pointer',
+                            selected === index && "bg-white drop-shadow-sm text-black",
+                            selected !== index && "hover:bg-gray-200 text-gray-700"
                         )}
                     >
                         {tab.header}
