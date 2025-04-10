@@ -20,6 +20,51 @@
   font-style: normal;
 }
 
+@theme {
+  --animate-float: float 3s ease-in-out infinite;
+  @keyframes float {
+    0% {
+      transform: translateY(0.5rem)
+    }
+    50% {
+      transform: translateY(-0.5rem)
+    }
+    100% {
+      transform: translateY(0.5rem)
+    }
+  }
+}
+
+@theme {
+  --animate-fade-out: fade-out 0.3s ease-in-out;
+  @keyframes fade-out {
+    0% {
+      filter: brightness(100%);
+      opacity: 100%;
+    }
+    50% {
+    }
+    100% {
+      transform: translateX(2.25rem) translateY(-1.75rem) rotate(4deg);
+      filter: brightness(50%);
+      opacity: 0%;
+    }
+  }
+}
+
+@theme {
+  --animate-slide-in: slide-in 0.3s ease-in-out;
+  @keyframes slide-in {
+    0% {
+    }
+    50% {
+    }
+    100% {
+      transform: translateX(-2.25rem) translateY(1.75rem) rotate(-4deg);
+      filter: brightness(100%);
+    }
+  }
+}
 
 body {
   background: var(--background);
@@ -31,7 +76,7 @@ body {
   margin-top: calc(var(--spacing) * 3);
   font-weight: 700;
   font-family: 'Inter', sans-serif;
-  color: rgb(0, 0, 20);
+  color: rgb(0, 0, 40);
 }
 
 .h2-no-colour {
@@ -46,7 +91,7 @@ body {
   margin-top: calc(var(--spacing) * 3);
   font-weight: 700;
   font-family: 'Inter', sans-serif;
-  color: rgb(0, 0, 20);
+  color: rgb(0, 0, 40);
 }
 
 .h3-no-colour {
@@ -58,7 +103,7 @@ body {
 
 .p-default {
   font-family: 'Inter', sans-serif;
-  color: rgb(54, 54, 54);
+  color: rgb(30, 30, 30);
   font-size: 1rem;
 }
 

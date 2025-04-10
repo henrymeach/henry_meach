@@ -18,4 +18,10 @@ export const images: image[] = [
         width: 200,
         height: 200,
     },
+    {
+        src: "/images/rizz.png",
+        alt: "Rizz",
+        width: 200,
+        height: 200,
+    },
 ]
