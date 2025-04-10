@@ -9,7 +9,7 @@ export default function Card({ title, description, image, href }: {
 }) {
     return (
         <Link href={href}>
-            <div className="rounded-md outline outline-2 hover:outline-sky-500 hover:bg-sky-100 active:bg-sky-200">
+            <div className="rounded-md outline-2 hover:outline-sky-500 hover:bg-sky-100 active:bg-sky-200">
                 <div className="overflow-hidden relative aspect-[16/7]">
                     <Image src={image} alt={`${title} image.`} fill={true} className="object-cover" />
                 </div>
@@ -36,7 +36,7 @@ export function ProjectCard({ title, description, image, href, techStack }: {
 }) {
     return (
         <Link href={href}>
-            <div className="rounded-2xl outline outline-2 bg-white hover:shadow-md hover:-translate-y-2 active:bg-gray-100 active:outline-gray-300">
+            <div className="rounded-2xl outline-2 bg-white hover:shadow-lg hover:-translate-y-2 active:bg-gray-100 active:outline-gray-300 transition">
                 <div className="overflow-hidden relative aspect-[16/8]">
                     <Image src={image} alt={`${title} image.`} fill={true} className="object-cover" />
                 </div>
