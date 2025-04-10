@@ -47,6 +47,12 @@ export const languageSkills = [
     title: "HTML",
     description: "Markup language for creating web pages"
   },
+  {
+    src: "/logos/css/css.svg",
+    alt: "CSS icon",
+    title: "CSS",
+    description: "Style sheet language for styling elements"
+  }
 ];
 
 
@@ -62,6 +68,12 @@ export const developmentSkills = [
     alt: "Next.js icon",
     title: "Next.js",
     description: "A React framework with server-side rendering"
+  },
+  {
+    src: "/logos/tailwind/tailwind.svg",
+    alt: "Tailwind icon",
+    title: "Tailwind",
+    description: "A CSS framework for easy styling"
   },
   {
     src: "/logos/selenium/selenium.svg",
