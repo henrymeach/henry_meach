@@ -8,7 +8,7 @@ export default function IconLink({title, href, src, className}: {
 }) {
     return (
         <a target="_blank" href={href} className={`${className} flex flex-row font-bold p-no-colour active:scale-95 items-center space-x-1 px-2`}>
-            <Image src={src} alt={`${title} logo`} width={20} height={20} />
+            <Image src={src} alt={`${title} logo`} width={18} height={18} />
                 {title ?
                 <span>
                     {title}

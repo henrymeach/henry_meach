@@ -4,8 +4,7 @@ import localFont from 'next/font/local'
 import Image from 'next/image'
 import { useState } from 'react'
 import IconLink from './IconLink'
-import { useForm } from 'react-hook-form'
-import { sendEmail } from '@/utils/send-email'
+import ContactForm from './ContactForm'
 
 const jacquard = localFont({ src: '../../public/fonts/Jacquard12-Regular.ttf' })
 
@@ -17,12 +16,6 @@ function Tooltip ({ text, className }: { text: string; className?: string }) {
   )
 }
 
-export type FormData = {
-    name: string;
-    email: string;
-    message: string;
-};
-
 export default function Footer ({
   id,
   className
@@ -32,8 +25,7 @@ export default function Footer ({
 }) {
   const email: string = 'henrymeach2@gmail.com'
   const [clicked, setClicked] = useState<boolean>(false)
-  const { register, handleSubmit, reset } = useForm<FormData>()
-
+  
   const onCopy = async () => {
     await navigator.clipboard.writeText(email).then(() => {
       setClicked(true)
@@ -42,10 +34,6 @@ export default function Footer ({
     setTimeout(() => {
       setClicked(false)
     }, 3000)
-  }
-
-  function onSubmit (data: FormData) {
-    sendEmail(data);
   }
 
   return (
@@ -62,50 +50,7 @@ export default function Footer ({
           </p>
         </div>
 
-        <form onSubmit={handleSubmit(onSubmit)} method='POST'>
-          <div className='space-y-5 mb-5'>
-            <div className='flex flex-row max-w-[475] gap-5'>
-              <div className='w-[50%]'>
-                <label className='block p-no-colour font-bold mb-1'>
-                  Your Name <sup>(required)</sup>
-                </label>
-                <input
-                  type='name'
-                  className='rounded bg-stone-200 text-sm text-black px-2 py-1 w-full'
-                  {...register('name', { required: true })}
-                />
-              </div>
-              <div className='w-[50%]'>
-                <label className='block p-no-colour font-bold mb-1'>
-                  Your Email <sup>(required)</sup>
-                </label>
-                <input
-                  type='email'
-                  className='rounded bg-stone-200 text-sm text-black px-2 py-1 w-full'
-                  {...register('email', { required: true })}
-                />
-              </div>
-            </div>
-            <div>
-              <label className='block p-no-colour font-bold mb-1'>
-                Message <sup>(required)</sup>
-              </label>
-              <textarea
-                className='rounded bg-stone-200 text-sm text-black w-full max-w-[475] h-50 px-2 py-1'
-                {...register('message', { required: true })}
-              />
-            </div>
-          </div>
-
-          <div className='flex justify-end max-w-[475]'>
-            <button
-              type='submit'
-              className='block rounded bg-blue-500 px-6 py-2 cursor-pointer hover:bg-blue-600 active:bg-blue-700'
-            >
-              <p className='p-no-colour font-bold'>Submit Email</p>
-            </button>
-          </div>
-        </form>
+        <ContactForm />
 
         <div>
           <p className='p-no-colour flex'>
