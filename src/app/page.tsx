@@ -26,7 +26,7 @@ export default function Home() {
           <div>
             <RevealPicture>
               <h2 className="h2-default">
-                I'm Henry.<sup className="text-xs align-super">(hover over me!)</sup>
+                I&apos;m <b className="!text-sky-600">Henry</b>.<sup className="text-xs align-super">(hover over me!)</sup>
               </h2>
             </RevealPicture>
             <div className="flex items-center space-x-1">
@@ -49,7 +49,7 @@ export default function Home() {
         </div>
 
         <p className="p-default max-w-2/3">
-          I'm a <b>Software Developer</b> who graduated with a Bachelor of Computer Science in 2024, and I'm constantly trying to learn and refine my knowledge of different technologies.
+          I&apos;m a <b>Software Developer</b> who graduated with a Bachelor of Computer Science in 2024, and I&apos;m constantly trying to learn and refine my knowledge of different technologies.
           My hope is that you enjoy this website as much as I did making it.
         </p>
       </section>
@@ -62,7 +62,7 @@ export default function Home() {
         </Link>
 
         <p className="p-default max-w-2/3 mb-10">
-          Some of my projects I've completed throughout the years.
+          Some of my projects I&apos;ve completed throughout the years.
         </p>
 
         <Showcase projects={projects} />
@@ -75,7 +75,7 @@ export default function Home() {
           </h2>
 
           <p className="p-default max-w-2/3 mb-10">
-            A variety of tools I've tinkered around with.
+            A variety of tools I&apos;ve tinkered around with.
           </p>
 
           <Tabs tabs={skillsTabs} />

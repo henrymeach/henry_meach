@@ -13,7 +13,7 @@ export default function Page() {
                         About Henry
                     </h1>
                     <p className="p-default !text-lg">
-                        Hi, I'm Henry. When I'm not working on my personal projects you can probably find me doomscrolling or playing League of Legends.
+                        Hi, I&apos;m Henry. When I&apos;m not working on my personal projects you can probably find me doomscrolling or playing League of Legends.
                         Going outside is also something I may invest some time into doing occasionally.
                         <br/><br/>
                         I love designing and engineering good-looking and, more importantly, <b>un-frustrating</b> user experiences.
