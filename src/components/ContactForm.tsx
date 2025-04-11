@@ -22,11 +22,11 @@ export default function ContactForm () {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className='max-w-[475]'>
+    <form onSubmit={handleSubmit(onSubmit)} className='md:min-w-[50%] md:max-w-[500]'>
       <div className='space-y-5 mb-5'>
         <div className='flex flex-row gap-5'>
           <div className='w-[50%]'>
-            <label className='block p-no-colour font-bold mb-1'>
+            <label className='block p-no-colour text-white font-bold mb-1'>
               Your Name <sup>(required)</sup>
             </label>
             <input
@@ -37,7 +37,7 @@ export default function ContactForm () {
             />
           </div>
           <div className='w-[50%]'>
-            <label className='block p-no-colour font-bold mb-1'>
+            <label className='block p-no-colour text-white font-bold mb-1'>
               Your Email <sup>(required)</sup>
             </label>
             <input
@@ -49,7 +49,7 @@ export default function ContactForm () {
           </div>
         </div>
         <div>
-          <label className='block p-no-colour font-bold mb-1'>
+          <label className='block p-no-colour text-white font-bold mb-1'>
             Message <sup>(required)</sup>
           </label>
           <textarea
@@ -69,7 +69,7 @@ export default function ContactForm () {
             submitted && 'bg-green-500 hover:bg-green-600 active:bg-green-700',
           )}
         >
-          <p className='p-no-colour font-bold'>{`${submitted ? 'Submitted!' : 'Submit Email'}`}</p>
+          <p className='p-no-colour text-white font-bold'>{`${submitted ? 'Submitted!' : 'Submit Email'}`}</p>
         </button>
       </div>
     </form>

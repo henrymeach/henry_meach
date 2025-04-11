@@ -21,15 +21,15 @@ export default function Home() {
 
   return (
     <div className="flex mt-15 flex-col space-y-15">
-      <section className="px-40" >
-        <div className="flex flex-row justify-between items-center mb-8">
+      <section className="edge">
+        <div className="flex md:flex-row flex-col md:justify-between md:items-center mb-8">
           <div>
             <RevealPicture>
               <h2 className="h2-default">
                 I&apos;m <b className="!text-sky-600">Henry</b>.<sup className="text-xs align-super">(hover over me!)</sup>
               </h2>
             </RevealPicture>
-            <div className="flex items-center space-x-1">
+            <div className="flex space-x-1">
               <Image src="/icons/location-pin.svg" alt="Location Pin Icon" width={15} height={15} />
               <p className="p-default">
                 Melbourne, Australia
@@ -38,7 +38,7 @@ export default function Home() {
             
           </div>
           
-          <ul className="flex flex-row space-x-3">
+          <ul className="flex flex-row space-x-3 -translate-x-2 md:translate-x-2 mt-2 md:mt-0">
             <li>
               <IconLinkButton title="LinkedIn" href="https://linkedin.com/in/henry-meach-26245716b/" src="/logos/linkedin/LI-In-Bug.png"/>
             </li>
@@ -48,13 +48,13 @@ export default function Home() {
           </ul>
         </div>
 
-        <p className="p-default max-w-2/3">
+        <p className="p-default md:max-w-2/3">
           I&apos;m a <b>Software Developer</b> who graduated with a Bachelor of Computer Science in 2024, and I&apos;m constantly trying to learn and refine my knowledge of different technologies.
           My hope is that you enjoy this website as much as I did making it.
         </p>
       </section>
 
-      <section className="flex flex-col px-40">
+      <section className="flex flex-col edge">
         <Link href="/projects" className="w-fit">
           <h2 className="hover:!text-sky-600 active:!text-sky-700 h2-default">
             Projects ⟶
@@ -69,7 +69,7 @@ export default function Home() {
 
       </section>
 
-      <section className="flex flex-col px-40 mb-20">
+      <section className="flex flex-col edge mb-20">
           <h2 className="h2-default">
             Skills
           </h2>

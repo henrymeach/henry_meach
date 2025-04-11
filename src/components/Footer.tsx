@@ -42,8 +42,8 @@ export default function Footer ({
       id={id}
     >
       <section className='my-10 space-y-7 flex-grow'>
-        <div>
-          <h2 className='h2-no-colour text-white'>Contact Me</h2>
+        <div className='text-white'>
+          <h2 className='h2-no-colour'>Contact Me</h2>
           <p className='p-no-colour'>
             My inbox is always open for opportunities, so feel free to reach
             out!
@@ -53,7 +53,7 @@ export default function Footer ({
         <ContactForm />
 
         <div>
-          <p className='p-no-colour flex'>
+          <p className='p-no-colour text-white flex'>
             Alternatively, feel free to send me an email at
             <button
               onClick={() => onCopy()}
@@ -74,7 +74,7 @@ export default function Footer ({
               />
             </button>
           </p>
-          <p className='p-no-colour flex items-center'>
+          <p className='p-no-colour text-white flex items-center'>
             Or check out my
             <IconLink
               title='LinkedIn'
@@ -94,7 +94,7 @@ export default function Footer ({
       </section>
 
       <p
-        className={`${jacquard.className} p-no-colour !text-2xl flex justify-center mb-3`}
+        className={`${jacquard.className} p-no-colour text-white !text-2xl flex justify-center mb-3`}
       >
         {`© ${new Date().getFullYear()} — Henry Meach`}
       </p>

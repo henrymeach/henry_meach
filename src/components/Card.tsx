@@ -36,7 +36,7 @@ export function ProjectCard({ title, description, image, href, techStack }: {
 }) {
     return (
         <Link href={href}>
-            <div className="rounded-2xl outline-2 bg-white hover:shadow-lg hover:-translate-y-2 active:bg-gray-100 active:outline-gray-300 transition">
+            <div className="rounded-2xl outline-2 bg-white outline-gray-200 hover:shadow-lg hover:-translate-y-2 active:bg-gray-100 active:outline-gray-300 transition">
                 <div className="overflow-hidden relative aspect-[16/8]">
                     <Image src={image} alt={`${title} image.`} fill={true} className="object-cover" />
                 </div>
@@ -51,7 +51,7 @@ export function ProjectCard({ title, description, image, href, techStack }: {
                     </div>
                     <div className="flex flex-row flex-wrap space-y-2 space-x-3 items-start">
                         {techStack.map((tech, index) => (
-                            <div key={index} className="bg-gray-200 rounded-md px-2 py-1">
+                            <div key={index} className="bg-gray-300 rounded-md px-2 py-1">
                                 <p className="p-default font-bold">
                                     {tech}
                                 </p>

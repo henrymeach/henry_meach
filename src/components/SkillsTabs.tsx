@@ -36,7 +36,7 @@ export default function Tabs({ tabs }: {
             </div>
             
             {/* Tab content */}
-            <div className="grid grid-cols-7 space-y-4 rounded py-4 w-[97%]">
+            <div className="grid grid-cols-3 md:grid-cols-7 space-y-4 rounded py-4 w-[97%]">
                 {selectedTab.skills.map((skill, index) => (
                     <SkillIcon key={index} src={skill.src} alt={skill.src} title={skill.title} description={skill.description} />
                 ))}
