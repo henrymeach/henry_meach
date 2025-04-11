@@ -20,6 +20,21 @@
   font-style: normal;
 }
 
+@theme {
+  --animate-float: float 3s ease-in-out infinite;
+  @keyframes float {
+    0% {
+      transform: translateY(0.5rem)
+    }
+    50% {
+      transform: translateY(-0.5rem)
+    }
+    100% {
+      transform: translateY(0.5rem)
+    }
+  }
+}
+
 @media (min-width: 768px) {
   .edge {
     padding-left: calc(var(--spacing) * 40);
