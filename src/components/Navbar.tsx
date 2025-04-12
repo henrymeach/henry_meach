@@ -1,9 +1,8 @@
 'use client';
 
 import localFont from 'next/font/local';
-import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
+// import { useState } from 'react';
 
 const jersey10Font = localFont({ src: '../../public/fonts/Jersey10-Regular.ttf' });
 
@@ -55,10 +54,10 @@ function Links({className}: {
 export default function Navbar({className}: {
     className?: string;
 }) {
-    const [menuOpen, setMenuOpen] = useState<boolean>(false);
+    // const [menuOpen, setMenuOpen] = useState<boolean>(false);
 
     return (
-        <div className={`edge`}>
+        <div className={`${className}`}>
             <Links className="md:flex" />
 
             {/* <div className='md:hidden z-50 fixed right-[2%] top-[2%]'>

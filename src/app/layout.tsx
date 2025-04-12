@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Suspense } from "react";
-import Loading from "./loading";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,7 +17,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body>
         <div className="min-h-screen">
-          <Navbar />
+          <Navbar className="edge" />
           {children}
           <Footer id="contact" />
         </div>
