@@ -32,7 +32,7 @@ export default function Showcase({ projects, className="" }: {
                         </Link>
                     ))}
                 </ul>
-                <div>
+                <div className="overflow-hidden">
                     <h3 className="h3-default !mt-0 !mb-2">
                         {selectedProject.title}
                     </h3>
@@ -47,7 +47,7 @@ export default function Showcase({ projects, className="" }: {
                         ))}
                     </ul>
                 </div>
-                <div className="h-64 w-full relative flex items-center justify-center">
+                <div className="h-64 relative flex items-center justify-center">
                     <Image 
                         src={selectedProject.image} 
                         alt={`Picture of ${selectedProject.title} project`}

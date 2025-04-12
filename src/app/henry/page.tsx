@@ -7,8 +7,8 @@ export default function Page() {
 
     return (
         <div className="grid grid-col">
-            <section className="grid grid-cols-[4fr_5fr] px-40 h-150 bg-emerald-50">
-                <div className="flex flex-col justify-center">
+            <section className="edge grid grid-rows md:grid-cols-[4fr_5fr] py-40 bg-emerald-50">
+                <div className="flex flex-col justify-center mb-20 md:mb-0">
                     <h1 className="h2-default inline-block">
                         About Henry
                     </h1>

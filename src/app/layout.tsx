@@ -19,12 +19,10 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body>
         <div className="min-h-screen">
-          <Navbar className="edge" />
-          <Suspense fallback={<Loading />}>
-            {children}
-          </Suspense>
+          <Navbar />
+          {children}
+          <Footer id="contact" />
         </div>
-        <Footer id="contact" className="edge" />
       </body>
     </html>
   );

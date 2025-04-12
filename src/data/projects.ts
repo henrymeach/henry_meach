@@ -1,7 +1,7 @@
 export const projects = [
     {
       title: "Hello",
-      description: "This is the description lorem ipsum delorium sdfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      description: "This is the description lorem ipsum delorium sdfffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
       image: "/images/henry.png",
       techStack: ["Python"],
       href: "/hello",

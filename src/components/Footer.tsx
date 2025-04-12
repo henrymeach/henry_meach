@@ -2,7 +2,7 @@
 
 import localFont from 'next/font/local'
 import Image from 'next/image'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import IconLink from './IconLink'
 import ContactForm from './ContactForm'
 
@@ -25,7 +25,12 @@ export default function Footer ({
 }) {
   const email: string = 'henrymeach2@gmail.com'
   const [clicked, setClicked] = useState<boolean>(false)
-  
+  const [year, setYear] = useState<number | null>(null);
+
+  useEffect(() => {
+    setYear(new Date().getFullYear())
+  }, []);
+
   const onCopy = async () => {
     await navigator.clipboard.writeText(email).then(() => {
       setClicked(true)
@@ -38,7 +43,7 @@ export default function Footer ({
 
   return (
     <footer
-      className={`${className} flex flex-col bg-gray-900 h-screen`}
+      className={`${className} edge flex flex-col bg-gray-900 min-h-screen`}
       id={id}
     >
       <section className='my-10 space-y-7 flex-grow'>
@@ -57,7 +62,7 @@ export default function Footer ({
             Alternatively, feel free to send me an email at
             <button
               onClick={() => onCopy()}
-              className='flex relative items-center space-x-1 cursor-pointer rounded hover:text-orange-600 text-orange-400 px-1 active:scale-98'
+              className='flex relative items-center space-x-1 cursor-pointer rounded hover:text-orange-600 text-orange-400 px-1 active:scale-98 overflow-hidden break-all'
             >
               {clicked ? (
                 <Tooltip
@@ -96,7 +101,7 @@ export default function Footer ({
       <p
         className={`${jacquard.className} p-no-colour text-white !text-2xl flex justify-center mb-3`}
       >
-        {`© ${new Date().getFullYear()} — Henry Meach`}
+        {`© ${year} — Henry Meach`}
       </p>
     </footer>
   )

@@ -20,8 +20,8 @@ export default function FlashCards({ images }: {
     }
 
     return (
-        <button onClick={onImageClick} className="relative w-110 h-75 group cursor-pointer">
-            <Image src="/images/pointer.webp" alt="pointer icon" width={20} height={20} className="absolute z-100 translate-x-100 translate-y-33 rotate-350 group-hover:scale-120 group-active:scale-100 transition"/>
+        <button onClick={onImageClick} className="relative w-[80%] h-75 group cursor-pointer">
+            <Image src="/images/pointer.webp" alt="pointer icon" width={20} height={20} className="absolute z-8 left-[90%] -bottom-[4%] rotate-350 group-hover:scale-120 group-active:scale-100 transition"/>
             {images.map((image, index) => {
 
                 return (
@@ -30,14 +30,14 @@ export default function FlashCards({ images }: {
                         "absolute object-cover bg-white rounded-lg transition",
                         {
                         // Current image
-                        "z-50 brightness-100 rotate-0 translate-y-0 translate-x-0 drop-shadow-xl": index === imageIndex,
+                        "z-7 brightness-100 rotate-0 translate-y-0 translate-x-0 drop-shadow-xl": index === imageIndex,
 
                         // Next image
-                        "z-40 brightness-50 rotate-4 -translate-y-7 translate-x-9 group-hover:-translate-y-9":
+                        "z-6 brightness-50 rotate-4 -translate-y-7 translate-x-9 group-hover:-translate-y-9":
                             index === (imageIndex + 1) % imagesLength,
 
                         // Other images (just there to prevent flicker)
-                        "z-30 opacity-0 brightness-50 rotate-4 -translate-y-7 translate-x-9": index !== imageIndex && index !== (imageIndex +1) % imagesLength,
+                        "z-5 opacity-0 brightness-50 rotate-4 -translate-y-7 translate-x-9": index !== imageIndex && index !== (imageIndex +1) % imagesLength,
                         }
                     )}
                 />

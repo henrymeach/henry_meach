@@ -20,7 +20,7 @@ export default function Home() {
   }];
 
   return (
-    <div className="flex mt-15 flex-col space-y-15">
+    <div className="flex md:mt-15 flex-col space-y-15">
       <section className="edge">
         <div className="flex md:flex-row flex-col md:justify-between md:items-center mb-8">
           <div>
@@ -61,7 +61,7 @@ export default function Home() {
           </h2>
         </Link>
 
-        <p className="p-default max-w-2/3 mb-10">
+        <p className="p-default md:max-w-2/3 mb-10">
           Some of my projects I&apos;ve completed throughout the years.
         </p>
 
@@ -74,7 +74,7 @@ export default function Home() {
             Skills
           </h2>
 
-          <p className="p-default max-w-2/3 mb-10">
+          <p className="p-default md:max-w-2/3 mb-10">
             A variety of tools I&apos;ve tinkered around with.
           </p>
 

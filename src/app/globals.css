@@ -37,106 +37,62 @@
 
 @media (min-width: 768px) {
   .edge {
-    padding-left: calc(var(--spacing) * 40);
-    padding-right: calc(var(--spacing) * 40);
-  }
-  
-  body {
-    background: var(--background);
-    color: var(--foreground);
-  }
-  
-  .h2-default {
-    font-size: 2.25rem;
-    margin-top: calc(var(--spacing) * 3);
-    font-weight: 700;
-    font-family: 'Inter', sans-serif;
-    color: rgb(0, 0, 40);
-  }
-  
-  .h2-no-colour {
-    font-size: 2.25rem;
-    margin-top: calc(var(--spacing) * 3);
-    font-weight: 700;
-    font-family: 'Inter', sans-serif;
-  }
-  
-  .h3-default {
-    font-size: 1.5rem;
-    margin-top: calc(var(--spacing) * 3);
-    font-weight: 700;
-    font-family: 'Inter', sans-serif;
-    color: rgb(0, 0, 40);
-  }
-  
-  .h3-no-colour {
-    font-size: 1.5rem;
-    margin-top: calc(var(--spacing) * 3);
-    font-weight: 700;
-    font-family: 'Inter', sans-serif;
-  }
-  
-  .p-default {
-    font-family: 'Inter', sans-serif;
-    color: rgb(30, 30, 30);
-    font-size: 1rem;
-  }
-  
-  .p-no-colour {
-    font-family: 'Inter', sans-serif;
-    font-size: 1rem;
+    padding-left: 15%;
+    padding-right: 15%;
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .edge {
-    padding-left: calc(var(--spacing) * 5);
-    padding-right: calc(var(--spacing) * 5);
+    padding-left: 5%;
+    padding-right: 5%;
   }
-  
-  body {
-    background: var(--background);
-    color: var(--foreground);
-  }
-  
-  .h2-default {
-    font-size: 2.25rem;
-    margin-top: calc(var(--spacing) * 3);
-    font-weight: 700;
-    font-family: 'Inter', sans-serif;
-    color: rgb(0, 0, 40);
-  }
-  
-  .h2-no-colour {
-    font-size: 2.25rem;
-    margin-top: calc(var(--spacing) * 3);
-    font-weight: 700;
-    font-family: 'Inter', sans-serif;
-  }
-  
-  .h3-default {
-    font-size: 1.5rem;
-    margin-top: calc(var(--spacing) * 3);
-    font-weight: 700;
-    font-family: 'Inter', sans-serif;
-    color: rgb(0, 0, 40);
-  }
-  
-  .h3-no-colour {
-    font-size: 1.5rem;
-    margin-top: calc(var(--spacing) * 3);
-    font-weight: 700;
-    font-family: 'Inter', sans-serif;
-  }
-  
-  .p-default {
-    font-family: 'Inter', sans-serif;
-    color: rgb(30, 30, 30);
-    font-size: 1rem;
-  }
-  
-  .p-no-colour {
-    font-family: 'Inter', sans-serif;
-    font-size: 1rem;
-  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.h2-default {
+  font-size: 2.25rem;
+  margin-top: calc(var(--spacing) * 3);
+  font-weight: 700;
+  font-family: 'Inter', sans-serif;
+  color: rgb(0, 0, 40);
+}
+
+.h2-no-colour {
+  font-size: 2.25rem;
+  margin-top: calc(var(--spacing) * 3);
+  font-weight: 700;
+  font-family: 'Inter', sans-serif;
+}
+
+.h3-default {
+  font-size: 1.5rem;
+  margin-top: calc(var(--spacing) * 3);
+  font-weight: 700;
+  font-family: 'Inter', sans-serif;
+  color: rgb(0, 0, 40);
+}
+
+.h3-no-colour {
+  font-size: 1.5rem;
+  margin-top: calc(var(--spacing) * 3);
+  font-weight: 700;
+  font-family: 'Inter', sans-serif;
+}
+
+.p-default {
+  font-family: 'Inter', sans-serif;
+  color: rgb(30, 30, 30);
+  font-size: 1rem;
+  @apply break-words overflow-hidden;
+}
+
+.p-no-colour {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  @apply break-words overflow-hidden;
 }

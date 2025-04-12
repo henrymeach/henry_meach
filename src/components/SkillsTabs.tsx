@@ -20,7 +20,7 @@ export default function Tabs({ tabs }: {
 
     return (
         <div className="flex flex-col items-center">
-            <div className="flex flex-row bg-gray-100 justify-around rounded-md p-1.25 space-x-2 mb-2 w-full">
+            <div className="flex flex-row bg-gray-100 justify-around items-center rounded-md p-1.25 space-x-2 mb-2 w-full">
                 {/* Tab headers */}
                 {tabs.map((tab, index) => (
                     <button key={index} onClick={() => setSelected(index)} 
