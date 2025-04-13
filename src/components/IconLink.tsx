@@ -25,7 +25,7 @@ export function IconLinkButton({title, href, src}: {
     src: string;
 }) {
     return (
-        <a target="_blank" href={href} className="flex flex-row font-bold hover:!text-sky-600 p-default decoration-sky-300 items-center space-x-2 p-2 rounded-md hover:bg-sky-100 active:bg-sky-200">
+        <a target="_blank" href={href} className="flex flex-row font-bold hover:text-sky-600 active:text-sky-600 active:shadow-md p-no-colour items-center space-x-2 p-2 rounded-md hover:bg-sky-100 active:bg-sky-200">
             <Image src={src} alt={`${title} logo`} width={25} height={25} />
                 {title ?
                 <span>

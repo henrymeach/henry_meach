@@ -7,7 +7,7 @@ export default function Page() {
 
     return (
         <div className="grid grid-col">
-            <section className="edge grid grid-rows md:grid-cols-[4fr_5fr] md:py-40 py-15 bg-emerald-50">
+            <section className="edge grid grid-rows md:grid-cols-[4fr_5fr] md:py-40 pb-15 bg-emerald-50">
                 <div className="flex flex-col justify-center mb-20 md:mb-0">
                     <h1 className="h2-default inline-block">
                         About Henry
