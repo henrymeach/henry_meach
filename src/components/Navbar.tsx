@@ -14,7 +14,7 @@ function WebsiteTitle({className, onExit}: {
 }) {
     return (
         <Link href="/" className={`${className}`} onClick={onExit}>
-            <h2 className={`${jersey10Font.className} text-4xl active:scale-98`}>
+            <h2 className={`${jersey10Font.className} text-black text-4xl active:scale-98`}>
                 henrymeach.com
             </h2>
         </Link>
