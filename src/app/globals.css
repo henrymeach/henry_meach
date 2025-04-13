@@ -35,10 +35,17 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .edge {
     padding-left: 15%;
     padding-right: 15%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .edge {
+    padding-left: 10%;
+    padding-right: 10%;
   }
 }
 
