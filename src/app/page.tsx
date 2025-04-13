@@ -26,7 +26,7 @@ export default function Home() {
           <div>
             <RevealPicture>
               <h2 className="h2-default">
-                I&apos;m <b className="!text-sky-600">Henry</b>.<sup className="text-xs align-super">(hover over me!)</sup>
+                I&apos;m <b className="!text-sky-600">Henry</b>.<sup className="text-xs align-super">(hover/tap me!)</sup>
               </h2>
             </RevealPicture>
             <div className="flex space-x-1">
