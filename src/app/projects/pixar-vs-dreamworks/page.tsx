@@ -1,13 +1,14 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect } from "react"
 
 export default function Page() {
     useEffect(() => {
-        var divElement = document.getElementById('viz1744556071696');
+        let divElement = document.getElementById('viz1744556071696');
         if (!divElement) return;
 
-        var vizElement = divElement.getElementsByTagName('object')[0];
+        let vizElement = divElement.getElementsByTagName('object')[0];
         if (!vizElement) return;
 
         if ( divElement.offsetWidth > 800 ) { 
@@ -21,7 +22,7 @@ export default function Page() {
             vizElement.style.height='4577px';
         } 
         
-        var scriptElement = document.createElement('script');
+        let scriptElement = document.createElement('script');
         scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
         vizElement.parentNode?.insertBefore(scriptElement, vizElement);
     }, []);
@@ -29,7 +30,7 @@ export default function Page() {
     return (
         <div className="flex justify-center">
             <div className='tableauPlaceholder w-full' id='viz1744556071696' style={{position: "relative"}}>
-            <noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pi&#47;PixarvsDreamWorks1&#47;Dashboard1&#47;1_rss.png' style={{border: 'none'}} /></a></noscript>
+            <noscript><a href='#'><img alt='Dashboard for Pixar vs DreamWorks' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pi&#47;PixarvsDreamWorks1&#47;Dashboard1&#47;1_rss.png' style={{border: 'none'}} /></a></noscript>
             <object className='tableauViz' style={{display: "none"}}>
                 <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
                 <param name='embed_code_version' value='3' />
