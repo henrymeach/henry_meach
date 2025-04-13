@@ -1,6 +1,11 @@
 import FlashCards from "@/components/FlashCards";
 import { images } from "@/data/images";
+import { Metadata } from "next";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+    title: 'Henry',
+};
 
 export default function Page() {
     const pictures = images;
