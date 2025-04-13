@@ -1,14 +1,13 @@
 "use client";
 
-import Image from "next/image";
 import { useEffect } from "react"
 
 export default function Page() {
     useEffect(() => {
-        let divElement = document.getElementById('viz1744556071696');
+        const divElement = document.getElementById('viz1744556071696');
         if (!divElement) return;
 
-        let vizElement = divElement.getElementsByTagName('object')[0];
+        const vizElement = divElement.getElementsByTagName('object')[0];
         if (!vizElement) return;
 
         if ( divElement.offsetWidth > 800 ) { 
@@ -22,7 +21,7 @@ export default function Page() {
             vizElement.style.height='4577px';
         } 
         
-        let scriptElement = document.createElement('script');
+        const scriptElement = document.createElement('script');
         scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
         vizElement.parentNode?.insertBefore(scriptElement, vizElement);
     }, []);
