@@ -10,6 +10,7 @@ export default function FlashCards({ images }: {
         alt: string;
         width: number;
         height: number;
+        className?: string;
     }[];
 }) {
     const imagesLength = images.length;
@@ -21,13 +22,13 @@ export default function FlashCards({ images }: {
 
     return (
         <button onClick={onImageClick} className="relative w-[80%] h-75 group cursor-pointer">
-            <Image src="/images/pointer.webp" alt="pointer icon" width={20} height={20} className="absolute z-8 left-[90%] -bottom-[4%] rotate-350 group-hover:scale-120 group-active:scale-100 transition"/>
+            <Image src="/images/pointer.webp" alt="pointer icon" width={20} height={20} className="absolute z-8 left-[90%] -bottom-[4%] rotate-350 group-hover:scale-120 group-active:scale-80 md:group-active:scale-100 transition"/>
             {images.map((image, index) => {
 
                 return (
                 <Image key={index} src={image.src} alt={image.alt} fill
                     className={clsx(
-                        "absolute object-cover bg-white rounded-lg transition",
+                        `${image.className} absolute object-cover bg-white rounded-lg transition`,
                         {
                         // Current image
                         "z-7 brightness-100 rotate-0 translate-y-0 translate-x-0 drop-shadow-xl": index === imageIndex,

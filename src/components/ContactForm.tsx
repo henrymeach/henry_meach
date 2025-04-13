@@ -27,7 +27,7 @@ export default function ContactForm () {
         <div className='flex flex-row gap-5'>
           <div className='w-[50%]'>
             <label className='block p-no-colour text-white font-bold mb-1'>
-              Your Name <sup>(required)</sup>
+              Your Name <sup className='text-red-500'>*</sup>
             </label>
             <input
               required
@@ -38,7 +38,7 @@ export default function ContactForm () {
           </div>
           <div className='w-[50%]'>
             <label className='block p-no-colour text-white font-bold mb-1'>
-              Your Email <sup>(required)</sup>
+              Your Email <sup className='text-red-500'>*</sup>
             </label>
             <input
               required
@@ -50,7 +50,7 @@ export default function ContactForm () {
         </div>
         <div>
           <label className='block p-no-colour text-white font-bold mb-1'>
-            Message <sup>(required)</sup>
+            Message <sup className='text-red-500'>*</sup>
           </label>
           <textarea
             required

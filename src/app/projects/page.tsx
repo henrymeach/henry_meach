@@ -3,7 +3,7 @@ import { projects } from "@/data/projects";
 
 export default function Page() {
     return (
-        <div className="edge flex flex-col space-y-15 my-15">
+        <div className="edge flex flex-col space-y-15 md:my-15 mt-0 mb-15">
             <section>
                 <h1 className="h2-default">Projects</h1>
                 <p className="p-default md:max-w-65/100">A variety of ideas that have piqued my interest enough for me to develop a project around them.

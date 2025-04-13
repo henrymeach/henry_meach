@@ -3,11 +3,12 @@ export type image = {
     alt: string;
     width: number;
     height: number;
+    className?: string;
 }
 
 export const images: image[] = [
     {
-        src: "/images/henry.png",
+        src: "/images/henry-2.jpeg",
         alt: "Picture of henry",
         width: 200,
         height: 200,
@@ -19,9 +20,10 @@ export const images: image[] = [
         height: 200,
     },
     {
-        src: "/images/rizz.png",
-        alt: "Rizz",
+        src: "/images/henry-3.jpeg",
+        alt: "Picture of henry",
         width: 200,
         height: 200,
+        className: "object-[0%_35%]"
     },
 ]
