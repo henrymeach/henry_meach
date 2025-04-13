@@ -1,10 +1,10 @@
 export const projects = [
     {
-      title: "Hello",
-      description: "This is the description lorem ipsum delorium sdfffffffffffffffffffffffff ffffffffffffffffffffffffffffffff",
-      image: "/images/rizz.png",
-      techStack: ["Python"],
-      href: "/hello",
+      title: "Alcohol Consumption Visualisation",
+      description: "A project I completed as a student visualising alcohol consumption in the USA. Find which states have the highest/lowest consumption rates! Built using Vega-Lite, allowing for interactive graphics.",
+      image: "/images/vegalite-project.png",
+      techStack: ["Vega-Lite", "HTML", "CSS", "JavaScript", "GitHub Pages"],
+      href: "https://henrymeach.github.io/VegaLite_Alcohol_Visualisation/",
     },
     {
       title: "Weather App",

@@ -35,7 +35,7 @@ export function ProjectCard({ title, description, image, href, techStack }: {
     techStack: string[];
 }) {
     return (
-        <Link href={href}>
+        <a href={href} target="_blank">
             <div className="rounded-2xl outline-2 overflow-hidden bg-white outline-gray-200 hover:shadow-lg hover:-translate-y-2 active:shadow-lg active:-translate-y-2 active:bg-gray-100 active:outline-gray-300 transition">
                 <div className="relative aspect-[16/8]">
                     <Image src={image} alt={`${title} image.`} fill={true} className="object-cover" />
@@ -60,6 +60,6 @@ export function ProjectCard({ title, description, image, href, techStack }: {
                     </div>
                 </div>
             </div>
-        </Link>
+        </a>
     )
 }
