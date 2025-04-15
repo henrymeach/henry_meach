@@ -22,7 +22,7 @@ export default function SkillIcon({src, alt, title, description, className}: {
 }) {
     return (
         <div className={`flex flex-col items-center relative group transition`}>
-            <Image src={src} alt={alt} width={100} height={100} className={`${className} rounded-xl h-17 w-17 drop-shadow-xl overflow-hidden hover:scale-105 mb-2 transition`} />
+            <Image src={src} alt={alt} width={100} height={100} className={`${className} rounded-xl h-14 w-14 drop-shadow-xl overflow-hidden hover:scale-105 mb-2 transition`} />
             <p className="p-default text-center font-medium">
                 {title}
             </p>
