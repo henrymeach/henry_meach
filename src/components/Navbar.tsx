@@ -73,7 +73,7 @@ export default function Navbar({className}: {
     useEffect(() => {
         if (menuOpen) {
             document.body.style.overflow = 'hidden';
-        } else document.body.style.overflow = 'scroll';
+        } else document.body.style.overflow = 'auto';
     }, [menuOpen]);
 
 
