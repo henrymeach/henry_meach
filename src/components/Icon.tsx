@@ -26,7 +26,7 @@ export default function SkillIcon({src, alt, title, description, className}: {
             <p className="p-default text-center font-medium">
                 {title}
             </p>
-            <Tooltip description={description} className="opacity-0 group-hover:opacity-100 pointer-events-none" />
+            <Tooltip description={description} className="opacity-0 group-active:opacity-100 group-hover:opacity-100 pointer-events-none" />
         </div>
     )
 }
