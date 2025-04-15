@@ -29,10 +29,9 @@ export function Links({className, onExit}: {
         <nav className={`${className} flex text-black flex-col md:flex-row items-center md:justify-between mt-8 mb-5`}>
             <WebsiteTitle className='mb-3 md:mb-0' />
 
-            <ul className='flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-8 !text-xl md:!text-[1rem] p-no-colour text-black font-bold'>
+            <ul className='flex flex-col md:flex-row space-y-2 items-center md:space-y-0 md:space-x-8 !text-5xl md:!text-[1rem] p-no-colour text-black font-bold'>
                 <li onClick={onExit}>
                     <Link href="/" className='flex flex-row items-center space-x-2.5 active:scale-95'>
-                        <Image src='/icons/home.svg' alt='Home icon' width={30} height={30} className='md:hidden' />
                         <p className="hover:text-sky-600 active:text-sky-600">
                             Home
                         </p>
@@ -40,7 +39,6 @@ export function Links({className, onExit}: {
                 </li>
                 <li onClick={onExit}>
                     <Link href="/projects" className='flex flex-row items-center space-x-2.5 active:scale-95'>
-                        <Image src='/icons/puzzle.svg' alt='Projects icon' width={30} height={30} className='md:hidden scale-90' />
                         <p className="hover:text-sky-600 active:text-sky-600">
                             Projects
                         </p>
@@ -48,7 +46,6 @@ export function Links({className, onExit}: {
                 </li>
                 <li onClick={onExit}>
                     <Link href="/henry" className='flex flex-row items-center space-x-2.5 active:scale-95'>
-                        <Image src='/icons/user.svg' alt='About me icon' width={30} height={30} className='md:hidden scale-75' />
                         <p className="hover:text-sky-600 active:text-sky-600">
                             About
                         </p>
@@ -56,7 +53,6 @@ export function Links({className, onExit}: {
                 </li>
                 <li onClick={onExit}>
                     <Link href="#contact" className='flex flex-row items-center space-x-2.5 active:scale-95'>
-                        <Image src='/icons/contact.svg' alt='Contact me icon' width={30} height={30} className='md:hidden scale-84' />
                         <p className="hover:text-sky-600 active:text-sky-600">
                             Contact
                         </p>
@@ -107,11 +103,7 @@ export default function Navbar({className}: {
                 </button>
             </div>
 
-            {
-                menuOpen ?
-                <Sidebar onExit={() => setMenuOpen(false)} /> :
-                null
-            }
+            <Sidebar className={`${menuOpen ? "translate-x-0" : "translate-x-full"} transition`} onExit={() => setMenuOpen(false)} />
         </div>
     )
 }

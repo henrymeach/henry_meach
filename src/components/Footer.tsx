@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react'
 import IconLink from './IconLink'
 import ContactForm from './ContactForm'
 
-const jacquard = localFont({ src: '../../public/fonts/Jacquard12-Regular.ttf' })
+export const jacquard = localFont({ src: '../../public/fonts/Jacquard12-Regular.ttf' })
 
 function Tooltip ({ text, className }: { text: string; className?: string }) {
   return (
@@ -58,11 +58,11 @@ export default function Footer ({
         <ContactForm />
 
         <div>
-          <p className='p-no-colour text-white flex'>
-            Alternatively, feel free to send me an email at
+          <p className='p-no-colour text-white flex flex-wrap md:max-w-[500px]'>
+            Or, feel free to send me an email at
             <button
               onClick={() => onCopy()}
-              className='flex relative items-center space-x-1 cursor-pointer rounded hover:text-orange-600 text-orange-400 px-1 active:scale-98 overflow-hidden break-all'
+              className='flex relative items-center space-x-1 cursor-pointer rounded hover:text-orange-600 text-orange-400 px-1 active:scale-98'
             >
               {clicked ? (
                 <Tooltip
@@ -78,9 +78,9 @@ export default function Footer ({
                 height={20}
               />
             </button>
-          </p>
-          <p className='p-no-colour text-white flex items-center'>
-            Or check out my
+            </p>
+            <p className='p-no-colour text-white flex flex-wrap md:max-w-[500px]'>
+            And check out my
             <IconLink
               title='LinkedIn'
               href='https://www.linkedin.com/in/henry-meach-26245716b/'
