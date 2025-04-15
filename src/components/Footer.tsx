@@ -49,6 +49,28 @@ export default function Footer ({
       <section className='my-10 space-y-7 flex-grow'>
         <div className='text-white'>
           <h2 className='h2-no-colour'>Contact Me</h2>
+
+          <div className='p-no-colour text-white flex flex-wrap space-x-6 mb-6 md:max-w-[500px]'>
+              <IconLink
+                title='LinkedIn'
+                href='https://www.linkedin.com/in/henry-meach-26245716b/'
+                src='/logos/linkedin/InBug-White.png'
+                className='text-orange-400 hover:text-orange-600'
+              />
+              <IconLink
+                title='GitHub'
+                href='https://www.github.com/henrymeach/'
+                src='/logos/github/github-mark-white.png'
+                className='text-orange-400 hover:text-orange-600'
+              />
+              <IconLink
+                title='Resume'
+                href='/documents/henry-meach-cv.pdf'
+                src='/icons/pdf-white.svg'
+                className='text-orange-400 hover:text-orange-600'
+              />
+            </div>
+
           <p className='p-no-colour'>
             My inbox is always open for opportunities, so feel free to reach
             out!
@@ -79,22 +101,9 @@ export default function Footer ({
               />
             </button>
             </p>
-            <p className='p-no-colour text-white flex flex-wrap md:max-w-[500px]'>
-            And check out my
-            <IconLink
-              title='LinkedIn'
-              href='https://www.linkedin.com/in/henry-meach-26245716b/'
-              src='/logos/linkedin/InBug-White.png'
-              className='text-orange-400 hover:text-orange-600'
-            />
-            and my
-            <IconLink
-              title='GitHub'
-              href='https://www.github.com/henrymeach/'
-              src='/logos/github/github-mark-white.png'
-              className='text-orange-400 hover:text-orange-600'
-            />
-          </p>
+            <div>
+            </div>
+            
         </div>
       </section>
 
