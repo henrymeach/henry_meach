@@ -79,7 +79,7 @@ export default function Navbar({className}: {
 
     // close sidebar menu when screen width is resized to medium size
     useEffect(() => {
-        let mql = window.matchMedia("(min-width: 768px)");
+        const mql = window.matchMedia("(min-width: 768px)");
 
         const handleResize = (e: MediaQueryListEvent) => {
             if (e.matches) {
