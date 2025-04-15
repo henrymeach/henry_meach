@@ -3,7 +3,7 @@
 import localFont from 'next/font/local';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Sidebar from './Sidebar';
 
 const jersey10Font = localFont({ src: '../../public/fonts/Jersey10-Regular.ttf' });
@@ -70,7 +70,31 @@ export function Links({className, onExit}: {
 export default function Navbar({className}: {
     className?: string;
 }) {
+    // sidebar open status
     const [menuOpen, setMenuOpen] = useState<boolean>(false);
+
+    // prevent scrolling when sidebar menu is open
+    useEffect(() => {
+        if (menuOpen) {
+            document.body.style.overflow = 'hidden';
+        } else document.body.style.overflow = 'scroll';
+    }, [menuOpen]);
+
+
+    // close sidebar menu when screen width is resized to medium size
+    useEffect(() => {
+        let mql = window.matchMedia("(min-width: 768px)");
+
+        const handleResize = (e: MediaQueryListEvent) => {
+            if (e.matches) {
+                setMenuOpen(false);
+            };
+        };
+
+        mql.addEventListener('change', handleResize);
+
+        return () => mql.removeEventListener('change', handleResize);
+    }, []);
 
     return (
         <div className={`${className}`}>
