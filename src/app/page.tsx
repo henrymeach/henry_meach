@@ -59,9 +59,9 @@ export default function Home() {
         <ExperienceList />
         <div className="flex justify-end">
           <a href="/documents/henry-meach-cv.pdf" download={"henry-meach-cv"}>
-          <button className="flex flex-row space-x-3 rounded px-5 py-2 cursor-pointer transition outline-2 bg-white outline-sky-500 hover:outline-sky-600 active:outline-sky-700 active:drop-shadow-md">
+          <button className="flex flex-row space-x-3 rounded px-5 py-2 cursor-pointer transition outline-2 bg-white outline-sky-500 hover:outline-sky-600 active:outline-sky-700 active:drop-shadow-md text-sky-500 hover:text-sky-600 active:text-sky-700">
             <Image src="icons/pdf.svg" alt="pdf icon" width={20} height={20}/>
-            <p className="p-no-colour font-bold text-sky-500 hover:text-sky-600 active:text-sky-700">
+            <p className="p-no-colour font-bold">
               Download Resume
             </p>
           </button>
