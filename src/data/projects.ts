@@ -1,5 +1,12 @@
 export const projects = [
     {
+      title: "raccoon_type Game",
+      description: "A typing test website to measure your words per minute, with a focus on typing the fastest that you can. Built to perform with React SWC + Vite.",
+      image: "/images/raccoontype.png",
+      techStack: ["React", "Vite", "Tailwind CSS", "TypeScript"],
+      href: "https://raccoontype.vercel.app/",
+    },
+    {
       title: "Animation Studios Tableau Viz",
       description: "A student visualisation of the Pixar and Dreamworks rivalry, showcasing differences in ratings, box office, and awards. Built with Tableau, wrangling Kaggle datasets with Excel and SQL.",
       image: "/images/tableau-project.png",
