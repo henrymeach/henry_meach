@@ -1,9 +1,9 @@
 export const projects = [
     {
-      title: "raccoon_type Game",
-      description: "A typing test website to measure your words per minute, with a focus on typing the fastest that you can. Built to perform with React SWC + Vite.",
+      title: "Raccoon_Type Game",
+      description: "A typing test website to measure your words per minute. Scores can be submitted to the live leaderboard, implemented with PostgreSQL and Supabase. Built to perform with React SWC + Vite.",
       image: "/images/raccoontype.png",
-      techStack: ["React", "Vite", "Tailwind CSS", "TypeScript"],
+      techStack: ["React", "Vite", "PostgreSQL", "Supabase", "Tailwind CSS", "TypeScript"],
       href: "https://raccoontype.vercel.app/",
     },
     {
