@@ -12,7 +12,8 @@ export default function Showcase ({
     image: string
     description: string
     techStack: string[]
-    href: string
+    href?: string
+    repo_href?: string
   }[]
   className?: string
 }) {
@@ -56,15 +57,27 @@ export default function Showcase ({
               ))}
             </ul>
           </div>
-          <div className='flex flex-col items-end'>
+          <div className="flex justify-end space-x-6">
+            { selectedProject.repo_href &&
+            <a
+              href={selectedProject.repo_href}
+              target='_blank'
+            >
+              <p className='p-no-colour font-bold text-orange-600 hover:text-orange-700 active:text-orange-700'>
+              Code ⟶
+              </p>
+            </a>
+            }
+            { selectedProject.href && 
             <a
                 href={selectedProject.href}
                 target='_blank'
             >
-                <p className='p-no-colour font-bold text-sky-600 hover:text-sky-700 active:scale-95'>
+                <p className='p-no-colour font-bold text-sky-600 hover:text-sky-700 active:text-sky-700'>
                 View ⟶
                 </p>
             </a>
+            }
           </div>
         </div>
         <div className='flex flex-row items-center justify-center space-x-2 md:hidden order-2'>

@@ -18,7 +18,7 @@ export default function Page() {
             <section className="grid grid-cols-1 md:grid-cols-2 gap-10">
                 {projects.map((project, index) => (
                     <div key={index}>
-                        <ProjectCard title={project.title} description={project.description} image={project.image} href={project.href} techStack={project.techStack} />
+                        <ProjectCard title={project.title} description={project.description} image={project.image} href={project.href} repo_href={project.repo_href} techStack={project.techStack} />
                     </div>
                 ))}
             </section>

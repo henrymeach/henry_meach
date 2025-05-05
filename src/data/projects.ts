@@ -5,6 +5,7 @@ export const projects = [
       image: "/images/raccoontype.png",
       techStack: ["React", "Vite", "PostgreSQL", "Supabase", "Tailwind CSS", "TypeScript"],
       href: "https://raccoontype.vercel.app/",
+      repo_href: "https://github.com/henrymeach/raccoontype",
     },
     {
       title: "Animation Studios Tableau Viz",
@@ -14,18 +15,20 @@ export const projects = [
       href: "/projects/pixar-vs-dreamworks",
     },
     {
-      title: "Alcohol Consumption Visualisation",
-      description: "A student project I completed visualising alcohol consumption in the USA. Find which states have the highest/lowest consumption rates! Built using Vega-Lite, allowing for interactive graphics.",
-      image: "/images/vegalite-project.png",
-      techStack: ["Vega-Lite", "HTML", "CSS", "JavaScript", "GitHub Pages"],
-      href: "https://henrymeach.github.io/VegaLite_Alcohol_Visualisation/",
-    },
-    {
       title: "This Portfolio Site",
       description: "I created this portfolio site to learn web development and to understand how to minimise user frustration with UI/UX. Responsive screen sizes made with love. Hosted on Vercel.",
       image: "/images/portfolio.png",
       techStack: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
       href: "/",
+      repo_href: "https://github.com/henrymeach/henry_meach",
+    },
+    {
+      title: "Alcohol Consumption Visualisation",
+      description: "A student project I completed visualising alcohol consumption in the USA. Find which states have the highest/lowest consumption rates! Built using Vega-Lite, allowing for interactive graphics.",
+      image: "/images/vegalite-project.png",
+      techStack: ["Vega-Lite", "HTML", "CSS", "JavaScript", "GitHub Pages"],
+      href: "https://henrymeach.github.io/VegaLite_Alcohol_Visualisation/",
+      repo_href: "https://github.com/henrymeach/VegaLite_Alcohol_Visualisation",
     },
   ];
   
