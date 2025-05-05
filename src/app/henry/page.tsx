@@ -14,12 +14,11 @@ export default function Page() {
         <div className="grid grid-col">
             <section className="edge grid grid-rows md:grid-cols-[4fr_5fr] md:py-40 pb-15 bg-emerald-50">
                 <div className="flex flex-col justify-center mb-20 md:mb-0">
-                    <h1 className="h2-default inline-block">
+                    <h1 className="h2-default inline-block mb-4">
                         About Henry
                     </h1>
                     <p className="p-default !text-lg">
-                        Hi, I&apos;m Henry. When I&apos;m not working on my personal projects you can probably find me doomscrolling or playing League of Legends.
-                        Going outside is also something I may invest some time into doing occasionally.
+                        Hi, I&apos;m Henry. When I&apos;m not working on my personal projects you can probably find me at the nearest KFC looking for my next Zinger Box (with wicked wings, not hot and crispy pieces).
                         <br/><br/>
                         I love designing and engineering good-looking and, more importantly, <b>un-frustrating</b> user experiences.
                     </p>
