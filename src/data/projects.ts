@@ -8,11 +8,11 @@ export const projects = [
       repo_href: "https://github.com/henrymeach/raccoontype",
     },
     {
-      title: "Animation Studios Tableau Viz",
-      description: "A student visualisation of the Pixar and Dreamworks rivalry, showcasing differences in ratings, box office, and awards. Built with Tableau, wrangling Kaggle datasets with Excel and SQL.",
-      image: "/images/tableau-project.png",
-      techStack: ["Tableau", "SQL", "Excel", "Kaggle"],
-      href: "/projects/pixar-vs-dreamworks",
+      title: "Discord Music Bot",
+      description: "A bot using Discord.py APIs to allow my friends and me to queue and listen to music together on Discord calls. Uses FFmpeg and youtube-dl to extract and play YouTube audio. Supports queueing, skipping, shuffling, and pausing songs. (deprecated)",
+      image: "/images/discord-music-bot.png",
+      techStack: ["Python","Discord.py","FFmpeg","youtube-dl"],
+      repo_href: "https://github.com/henrymeach/discord-music-bot",
     },
     {
       title: "This Portfolio Site",
@@ -21,6 +21,13 @@ export const projects = [
       techStack: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
       href: "/",
       repo_href: "https://github.com/henrymeach/henry_meach",
+    },
+    {
+      title: "Animation Studios Tableau Viz",
+      description: "A student visualisation of the Pixar and Dreamworks rivalry, showcasing differences in ratings, box office, and awards. Built with Tableau, wrangling Kaggle datasets with Excel and SQL.",
+      image: "/images/tableau-project.png",
+      techStack: ["Tableau", "SQL", "Excel", "Kaggle"],
+      href: "/projects/pixar-vs-dreamworks",
     },
     {
       title: "Alcohol Consumption Visualisation",
